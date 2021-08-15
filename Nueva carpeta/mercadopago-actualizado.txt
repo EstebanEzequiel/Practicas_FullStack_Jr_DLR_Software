@@ -1,0 +1,17 @@
+Generar orden:
+https://api.mercadopago.com/instore/qr/seller/collectors/USER_ID/stores/EXTERNAL_STORE_ID/pos/EXTERNAL_POS_ID/orders \
+
+Anular orden: (Baja prioridad)
+https://api.mercadopago.com/instore/qr/seller/collectors/USER_ID/pos/EXTERNAL_POS_ID/orders 
+
+Obtener informacion de la orden:
+https://api.mercadopago.com/merchant_orders?external_reference=$EXTERNAL_REFERENCE
+
+Realizar devolucion:(Alta prioridad)
+https://api.mercadopago.com/v1/payments/:ID/refunds
+
+
+devolucion.post
+Parametros: sucursal|caja|external_id
+Devolver: external_id_dev
+Procedimiento: buscar en el body del external_id si tiene payments, si lo tiene se devuelve sino devuelve error.

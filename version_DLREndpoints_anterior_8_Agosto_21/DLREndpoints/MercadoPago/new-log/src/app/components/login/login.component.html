@@ -1,0 +1,11 @@
+<div class="login">
+    <h1>Login</h1>
+    <form>
+        <input type="text" [(ngModel)]="usuario" name="u" placeholder="Username" required="required" />
+        <input type="password" [(ngModel)]="password" name="p" placeholder="Password" required="required" />
+        <button type="submit" (click)="posteo()" class="btn btn-primary btn-block btn-large">Ingresar</button>
+    </form>
+    <br>
+    <div class="red"> {{error | json}}</div>
+   
+</div>

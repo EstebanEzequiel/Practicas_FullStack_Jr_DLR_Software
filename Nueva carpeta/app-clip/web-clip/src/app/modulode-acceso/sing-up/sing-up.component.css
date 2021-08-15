@@ -1,0 +1,50 @@
+html {
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+}
+
+
+.body{
+    display: grid;
+    grid-template-areas: ". centrado .";
+    margin: 0;
+}
+
+.container{
+    grid-area: centrado;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #d0ece7cc;
+    border-radius: 0.5rem;
+    text-align: center;
+    color: white;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    margin-top: 5rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    width: 80%;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    padding: 7px;
+    border: transparent;
+    border-radius: 0.25rem;
+}
+
+h2{
+    text-transform: uppercase;
+}
+
+img{
+    border-radius: 250px;
+    margin-top: -7rem;
+}
+
+button{
+    padding: 8px 15px;
+}

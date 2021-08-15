@@ -1,0 +1,79 @@
+
+<div id="alberto"></div>
+
+--------------------------
+<div CambiaColore [nombre]="'Nombre Generico'" *ngFor="let nombre of infodelerver" >
+    {{nombre }}
+</div>
+
+<input placeholder="sin nombre" type="text"  [ngModel]="nombre"  (input)="nomaximo($event.target.value)">
+ 
+<button [disabled]="!valido" (click)="mostrarnombre()">mostrar nombre del codigo</button>
+
+
+<div>
+    EJERCICIO 13/1/2021
+</div>
+<div >
+    <!--un negro que escucha-->
+    {{albertonombreAPI | async}}
+</div>
+
+
+
+{{400 | currency}} 
+
+
+<table>
+
+    <tr>
+  
+      <td>Endpoint</td>
+  
+      <td>Metodo</td>
+  
+      <td>Seguridad</td>
+  
+    </tr>
+   
+    <tr *ngFor="let end of endpoints">
+  
+      <td>{{end.endpoint}}</td>
+  
+      <td>{{end.metodo}}</td>
+  
+      <td>{{end.seguridad}}</td>
+  
+    </tr>
+  
+  </table>
+
+
+
+<form [formGroup]="formanombre" (ngSubmit)="submitForm()">
+    
+    <label class="labelform">
+      
+        <span class="labell">
+        Nombre
+      </span>
+      
+      
+    <input class="inputform" type="text" [formControlName]="'nombre'"   />
+    
+    <!--formanombre.controls.nombre.to...-->
+    <div *ngIf="formFields.nombre.touched && formFields.nombre.invalid" >
+        <div *ngIf="formFields.nombre.errors.required" >
+            este campo no puede estar vacio.
+        </div> 
+        <div  *ngIf="formFields.nombre.errors.minlength" >
+            Nombre no debe ser menor a {{formFields.nombre.errors.minlength.requiredLength}}
+        </div> 
+        <div  *ngIf="formFields.nombre.errors.maxlength" >
+            Nombre no debe ser mayor a {{formFields.nombre.errors.maxlength.requiredLength}}
+        </div>
+      </div>
+    </label>
+   
+    <button [disabled]="!formanombre.valid" class="botning" type="submit">Iniciar sesión</button>
+</form>

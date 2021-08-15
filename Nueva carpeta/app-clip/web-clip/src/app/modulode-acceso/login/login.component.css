@@ -1,0 +1,28 @@
+section{
+    display: grid;
+    grid-template-areas: ". centrado ."
+    '. robert .'
+    '. reset .';
+
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+    grid-template-rows: 1fr 0.1fr;
+}
+.container{
+    grid-area: centrado;
+    
+    color: white;
+}
+.alberto{
+    display: flex;
+    background-color: blue;
+    justify-content: center;
+    font-size: 10px;
+
+}
+.roberto{
+    grid-area: robert;
+    color: rebeccapurple;
+}
+.reset{
+    grid-area: reset;
+}

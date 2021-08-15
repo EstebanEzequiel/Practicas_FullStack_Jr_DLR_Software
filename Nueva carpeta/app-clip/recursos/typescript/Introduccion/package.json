@@ -1,0 +1,9 @@
+{
+  "main": "main.ts",
+"scripts": {
+  "dev": "node main.ts"
+  },
+  "dependencies": {
+    "typescript": "^4.0.5"
+  }
+}

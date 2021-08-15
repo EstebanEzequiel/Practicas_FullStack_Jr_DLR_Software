@@ -1,0 +1,38 @@
+<div class="body">
+    <div class="container">
+        <img src="../../../assets/38674209_822191858169802_775953779815088128_n.jpg" alt="">
+        <h2>Crear Usuario</h2>
+        <br>
+        <form [formGroup]="singupForm" (ngSubmit)="submitForm()">
+            <label for="nombre" >
+                <input type="text" id="nombre" placeholder="Nombre" [formControlName]="'usuario'">
+
+            </label>
+            <label for="apellido">
+                <input type="text" id="apellido" placeholder="Apellido" [formControlName]="'apellido'">
+            </label>
+            <label for="email">
+                <input type="email" id="email" placeholder="Correo" [formControlName]="'correo'">
+            </label>
+            <label for="pass">
+                <input type="password" id="pass" placeholder="Contraseña" [formControlName]="'password'">
+            </label>
+            <br>
+            <label for="submit">
+                <button type="submit" id="submit">Enviar</button>
+            </label>
+            <br>
+            
+        </form>
+    </div>
+</div>
+
+<div *ngIf='infodelProvedor!=undefined; else elseBlock'>
+   <div class="info">
+        {{infodelProvedor.title}}
+    
+    </div>
+</div>
+<ng-template #elseBlock>
+    Cargando INFO....
+</ng-template>
