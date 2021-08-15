@@ -1,0 +1,11 @@
+var request = require('request');
+var options = {
+  'method': 'GET',
+  'url': 'http://localhost:9003/mercadopago/?id=33333332&topic=payment',
+  'headers': {
+  }
+};
+request(options, function (error, response) {
+  if (error) throw new Error(error);
+  console.log(response.body);
+});
