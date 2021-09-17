@@ -1,0 +1,13 @@
+Ha agregado otro repositorio de git dentro de su repositorio actual.
+Los clones del repositorio externo no contendrán el contenido de
+el repositorio incrustado y no sabrá cómo obtenerlo.
+Si deseaba agregar un submódulo, use:
+
+submódulo git agregar <url> DLREndpoints_15-Agosto-21
+
+Si agregó esta ruta por error, puede eliminarla de la
+índice con:
+
+ git rm - DLREndpoints en caché_15-Agosto-21
+
+Consulte "submódulo de ayuda de git" para obtener más información.
